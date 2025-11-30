@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration - Backend Validation Example</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>User Registration</h1>
+            <p class="subtitle">Backend Validation Example for E2E Testing</p>
+            
+            <form id="registrationForm">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input 
+                        type="text" 
+                        id="username" 
+                        name="username" 
+                        placeholder="Enter username"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        placeholder="Enter email"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input 
+                        type="number" 
+                        id="age" 
+                        name="age" 
+                        placeholder="Enter age"
+                        min="1"
+                        max="150"
+                        required
+                    >
+                </div>
+
+                <button type="submit" id="submitBtn">Register User</button>
+            </form>
+
+            <div id="message" class="message hidden"></div>
+
+            <div class="user-info hidden" id="userInfo">
+                <h3>Registration Successful!</h3>
+                <p><strong>User ID:</strong> <span id="userId"></span></p>
+                <p><strong>Username:</strong> <span id="displayUsername"></span></p>
+                <p><strong>Email:</strong> <span id="displayEmail"></span></p>
+                <p><strong>Age:</strong> <span id="displayAge"></span></p>
+                <button id="registerAnother" class="secondary-btn">Register Another User</button>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <h2>About This Example</h2>
+            <p>This application demonstrates how to validate backend data after UI actions in E2E tests.</p>
+            <ul>
+                <li>Fill out the registration form and submit</li>
+                <li>The data is saved to a SQLite database via REST API</li>
+                <li>E2E tests verify the UI action AND backend database state</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

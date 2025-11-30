@@ -1,0 +1,32 @@
+{
+  "name": "backend-validation-example",
+  "version": "1.0.0",
+  "description": "Example demonstrating how to validate backend data after UI actions in E2E tests",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test:cypress": "cypress run",
+    "test:cypress:open": "cypress open",
+    "test:playwright": "playwright test",
+    "test:playwright:ui": "playwright test --ui",
+    "test:all": "npm run test:cypress && npm run test:playwright"
+  },
+  "keywords": [
+    "e2e",
+    "testing",
+    "cypress",
+    "playwright",
+    "backend-validation"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "sql.js": "^1.10.3"
+  },
+  "devDependencies": {
+    "cypress": "^13.6.2",
+    "@playwright/test": "^1.40.1"
+  }
+}

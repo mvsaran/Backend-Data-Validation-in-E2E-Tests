@@ -1,0 +1,9 @@
+users.db
+node_modules/
+*.log
+.DS_Store
+cypress/screenshots/
+cypress/videos/
+test-results/
+playwright-report/
+screenshots/
