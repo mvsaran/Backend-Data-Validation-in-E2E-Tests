@@ -59,6 +59,21 @@ cy.request('GET', '/api/users/1').then((response) => {
 });
 ```
 
+## 🎬 Application Demo
+
+### User Registration Flow
+
+![Application Demo](assets/app-demo.webp)
+
+**What's happening in the demo:**
+1. 👤 User fills out the registration form with username, email, and age
+2. 📤 Form is submitted to the backend API (`POST /api/users`)
+3. ✅ Backend validates the data and saves to SQLite database
+4. 🎉 Success message displays with the registered user information
+5. 💾 User data is now stored in the database and can be verified via API
+
+This demo shows the complete flow that our E2E tests validate - both the UI interaction **and** the backend data persistence.
+
 ## 🚀 Quick Start
 
 ### Prerequisites
